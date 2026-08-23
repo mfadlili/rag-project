@@ -1,5 +1,6 @@
 uv.lock
-.venv
-.fastapicloud
-__pychache__
-data
+.venv/
+.fastapicloud/
+__pychache__/
+data/
+app/__pychache__/
