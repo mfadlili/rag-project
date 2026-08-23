@@ -1,0 +1,5 @@
+uv.lock
+.venv
+.fastapicloud
+__pychache__
+data
