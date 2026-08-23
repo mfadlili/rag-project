@@ -189,21 +189,6 @@ Pada project ini, ingestion dilakukan secara terpisah dari FastAPI. Dokumen di-e
 
 Pemilihan `notispace/ns-embed` merupakan keputusan desain implementasi. Project ini belum melakukan benchmark komparatif dengan model embedding lain, sehingga README tidak mengklaim model ini lebih unggul daripada alternatif lain.
 
-### 3.6 Design Decision dan Hasil Evaluasi
-
-Kombinasi `top_k=5` dan `notispace/ns-embed` digunakan sebagai baseline dan dievaluasi dengan 15 pertanyaan yang mencakup in-scope, out-of-scope, version conflict, dan prompt injection.
-
-| Metric | Hasil |
-|---|---:|
-| Total pertanyaan | 15 |
-| Pass | 13 |
-| Fail | 2 |
-| Score | **86,67%** |
-
-Dua kegagalan adalah **Test 6**, mengenai kondisi permintaan perlengkapan pada hari yang sama, dan **Test 11**, mengenai keberlakuan versi 1.4 dibandingkan v2.0.
-
-Perbaikan berikutnya dapat menggunakan metadata filtering berdasarkan `document_version` dan `is_active`, similarity threshold, retrieval khusus version conflict, serta evaluasi retrieval secara terpisah dari generation.
-
 ## 4. Arsitektur
 
 ```text
