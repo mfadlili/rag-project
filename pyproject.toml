@@ -1,0 +1,16 @@
+[project]
+name = "rag-project-service"
+version = "0.1.0"
+description = "RAG Chatbot Nusantara Care"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]",
+    "openai",
+    "chromadb",
+    "langchain-text-splitters>=1.1.2",
+]
+
+[tool.uv.workspace]
+members = [
+    "mfi-nusantaracare",
+]
